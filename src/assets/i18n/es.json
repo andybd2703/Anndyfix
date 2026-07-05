@@ -36,5 +36,8 @@
       "Antivirus (optimizacion y configuracion)",
       "Punto restauracion"
     ]
+  },
+  "Office": {
+    "titulo": "Instalamos Pauqetes de Office 365"
   }
 }

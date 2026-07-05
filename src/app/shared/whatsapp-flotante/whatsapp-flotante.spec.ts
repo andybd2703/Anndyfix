@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Navbar } from './navbar';
+import { WhatsappFlotante } from './whatsapp-flotante';
 
-describe('Navbar', () => {
-  let component: Navbar;
-  let fixture: ComponentFixture<Navbar>;
+describe('WhatsappFlotante', () => {
+  let component: WhatsappFlotante;
+  let fixture: ComponentFixture<WhatsappFlotante>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Navbar],
+      imports: [WhatsappFlotante],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Navbar);
+    fixture = TestBed.createComponent(WhatsappFlotante);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

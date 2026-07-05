@@ -40,9 +40,7 @@ export class NuestroServicios implements OnInit {
         'servicios.descripcion_formateo',
       ])
       .subscribe((res) => {
-        console.log('Respuesta traduccion:', res); // <-- temporal
         this.descripcionFisico = this.parseLista(res['servicios.descripcion_fisico']);
-        console.log('Fisico parseado:', this.descripcionFisico); // <-- temporal
         this.descripcionSoftware = this.parseLista(res['servicios.descripcion_software']);
         this.descripcionFormateo = this.parseLista(res['servicios.descripcion_formateo']);
       });

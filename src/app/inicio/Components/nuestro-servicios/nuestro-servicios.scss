@@ -1,6 +1,6 @@
 .nuestros-servicios {
   padding: 4rem 2rem;
-  max-width: 1280px;
+  max-width: 1600px; // antes 1280px, ahora da espacio para las 3 cards grandes
   margin: 0 auto;
 
   .title-servicios {
@@ -8,13 +8,13 @@
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 3rem;
-    color: var(--color-titulo, #1a1a1a);
+    color: var(--color-titulo, #ffffff);
   }
 }
 
 .mantenimientos {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; // antes wrap, ahora fuerza que nunca bajen de línea
   justify-content: center;
   gap: 2.5rem;
 
@@ -23,11 +23,12 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    flex: 1 1 340px; // un poco más ancho que antes para acomodar la img grande
-    max-width: 400px; // subí de 360px a 400px
+    flex: 1 1 0; // reparte el espacio equitativo entre las 3, en vez de un tamaño fijo
+    min-width: 0; // evita que el contenido interno (texto largo) empuje y rompa el layout
+    max-width: 480px;
     background: #fff;
-    border-radius: 1rem;
-    padding: 1.5rem;
+    border-radius: 1.25rem;
+    padding: 2.5rem;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 
@@ -38,17 +39,17 @@
 
     img {
       width: 100%;
-      max-width: 320px; // antes 220px, ahora bastante más grande
+      max-width: 380px;
       aspect-ratio: 404 / 405;
       object-fit: cover;
       border-radius: 0.75rem;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
     }
 
     h3 {
-      font-size: 1.15rem;
+      font-size: 1.35rem;
       font-weight: 600;
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
       color: var(--color-subtitulo, #1a1a1a);
     }
   }
@@ -64,16 +65,16 @@
   li {
     position: relative;
     padding-left: 1.25rem;
-    margin-bottom: 0.6rem;
-    font-size: 0.9rem;
-    line-height: 1.4;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
     color: var(--color-texto, #4a4a4a);
 
     &::before {
       content: '';
       position: absolute;
       left: 0;
-      top: 0.5em;
+      top: 0.55em;
       width: 6px;
       height: 6px;
       border-radius: 50%;
@@ -87,6 +88,16 @@
 }
 
 // Responsive: en pantallas chicas, apilar y usar todo el ancho disponible
+@media (max-width: 1024px) {
+  .mantenimientos {
+    flex-wrap: wrap; // aquí sí permitimos que se acomoden en 2 o 1 por fila
+  }
+
+  article {
+    flex: 1 1 340px !important;
+  }
+}
+
 @media (max-width: 768px) {
   .nuestros-servicios {
     padding: 2.5rem 1rem;
@@ -96,10 +107,11 @@
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+  }
 
-    article {
-      max-width: 100%;
-      width: 100%;
-    }
+  article {
+    max-width: 100% !important;
+    width: 100%;
+    padding: 2rem;
   }
 }
