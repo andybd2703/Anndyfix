@@ -10,6 +10,7 @@
   margin-top: 1rem;
   transform: translateX(50%);
   align-items: center;
+  justify-content: center;
 }
 
 
@@ -27,6 +28,23 @@
   order: 0;
   flex-grow: 1;
   margin-left: 3rem;
+  margin-top: 1rem;
+}
+
+.logotipo{
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  color: #FFFFFF;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin-left: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .descripcion{

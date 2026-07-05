@@ -1,1 +1,30 @@
-<p>nuestro-servicios works!</p>
+<section class="nuestros-servicios">
+
+
+  <h2 class="title-servicios">{{'servicios.titulo' | translate}}</h2>
+
+  <div class="mantenimientos">
+    <article class="software">
+      <img [src]="software" alt="Mantenimiento">
+      <h3 class="titulo-software">{{'servicios.software' | translate}}</h3>
+      <ul class="descripcion-mantenimiento">
+        <li *ngFor="let item of descripcionSoftware">{{ item }}</li>
+      </ul>
+    </article>
+    <article class="formateo">
+      <img [src]="formateo" alt="Mantenimiento">
+      <h3 class="formateo">{{'servicios.formateo' | translate}}</h3>
+      <ul class="descripcion-mantenimiento">
+        <li *ngFor="let item of descripcionFormateo">{{ item }}</li>
+      </ul>
+    </article>
+    <article class="fisico">
+      <img [src]="fisico" alt="Mantenimiento">
+      <h3 class="formateo">{{'servicios.fisico' | translate}}</h3>
+      <ul class="descripcion-mantenimiento">
+        <li *ngFor="let item of descripcionFisico">{{ item }}</li>
+      </ul>
+    </article>
+  </div>
+
+</section>

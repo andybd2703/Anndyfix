@@ -2,5 +2,39 @@
   "inicio": {
     "Descripcion": "Anndy Fix Pro Compfuter (AFPC) es una empresa especializada en el mantenimiento preventivo y correctivo de equipos de cómputo. Ofrecemos soluciones integrales en hardware y software, orientadas a optimizar el rendimiento, prolongar la vida útil de los equipos y garantizar la continuidad de las operaciones tecnológicas de nuestros clientes. Nuestro compromiso es brindar un servicio técnico confiable, eficiente y de alta calidad, respaldado por personal capacitado y un enfoque basado en la excelencia, la innovación y la satisfacción del cliente.",
     "logotipo": "Soluciones profesionales en mantenimiento y soporte tecnológico. "
+  },
+  "servicios": {
+    "titulo": "Nuestros Servicios",
+    "software": "Mantenimiento de Software",
+    "fisico": "Mantenimiento de Fisico",
+    "formateo": "Mantenimiento de Formateo",
+    "descripcion_fisico": [
+      "Desarme total y limpieza de sus partes con productos especializados",
+      "Reemplazo de pasta termica",
+      "Limpieza de contactos Disco Duro, Ram",
+      "Verificacion estado de conexiones",
+      "Verificacion estado de bateria interna bios ( si aplica )"
+    ],
+    "descripcion_software": [
+      "Activacion de sistema operativo (si aplica)",
+      "Limpieza y actualizacion del sistema",
+      "Instalacion de paquete de office y activacion (si aplica)",
+      "Limpieza, optimizacion y correccion de disco",
+      "Configuracion y optimizacion de software y aplicaciones, entre otros",
+      "Navegadores (limpieza, optimizacion y configuracion)",
+      "Antivirus (Optimizacion y configuracion)",
+      "Puntos de restauracion"
+    ],
+    "descripcion_formateo": [
+      "Recuperacion de Informacion (si aplica)",
+      "Reinstalacion Sistema operativo + activacion",
+      "Actualizacion del sistema",
+      "Instalacion de paquete de office y activacion",
+      "Configuracion de optimizacion de software, entre otros",
+      "Instalacion de programas de audio y video",
+      "Navegadores (optimizacion y configuracion)",
+      "Antivirus (optimizacion y configuracion)",
+      "Punto restauracion"
+    ]
   }
 }

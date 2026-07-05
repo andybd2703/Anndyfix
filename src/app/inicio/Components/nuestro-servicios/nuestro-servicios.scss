@@ -1,0 +1,105 @@
+.nuestros-servicios {
+  padding: 4rem 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  .title-servicios {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--color-titulo, #1a1a1a);
+  }
+}
+
+.mantenimientos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 340px; // un poco más ancho que antes para acomodar la img grande
+    max-width: 400px; // subí de 360px a 400px
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      width: 100%;
+      max-width: 320px; // antes 220px, ahora bastante más grande
+      aspect-ratio: 404 / 405;
+      object-fit: cover;
+      border-radius: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--color-subtitulo, #1a1a1a);
+    }
+  }
+}
+
+.descripcion-mantenimiento {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+
+  li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--color-texto, #4a4a4a);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--color-acento, #2f80ed);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Responsive: en pantallas chicas, apilar y usar todo el ancho disponible
+@media (max-width: 768px) {
+  .nuestros-servicios {
+    padding: 2.5rem 1rem;
+  }
+
+  .mantenimientos {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    article {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
