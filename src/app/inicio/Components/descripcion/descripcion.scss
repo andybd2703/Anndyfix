@@ -1,6 +1,15 @@
+.descripcion{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
 .imagen-descripcion{
   width: 50%;
   height: 50%;
+  margin-top: 1rem;
+  transform: translateX(50%);
+  align-items: center;
 }
 
 
@@ -17,4 +26,11 @@
   flex: none;
   order: 0;
   flex-grow: 1;
+  margin-left: 3rem;
+}
+
+.descripcion{
+  color: #FFFFFF;
+  text-align: justify;
+  margin-right: 26px;
 }
