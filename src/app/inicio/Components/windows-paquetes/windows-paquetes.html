@@ -1,1 +1,28 @@
-<p>windows-paquetes works!</p>
+<section class="windows-alt">
+  <div class="windows-alt__imagen-wrapper">
+    <img class="windows-alt__imagen" [src]="logo" alt="Logo">
+  </div>
+
+  <div class="windows-alt__contenido">
+    <h2 class="windows-alt__titulo">{{ 'windows.titulo' | translate }}</h2>
+
+    <div class="windows-alt__item">
+      <h3 class="windows-alt__subheading">{{ 'windows.subheading1' | translate }}</h3>
+      <p class="windows-alt__texto">{{ 'windows.texto1' | translate }}</p>
+    </div>
+
+    <div class="windows-alt__item">
+      <h3 class="windows-alt__subheading">{{ 'windows.subheading2' | translate }}</h3>
+      <p class="windows-alt__texto">{{ 'windows.texto2' | translate }}</p>
+    </div>
+
+    <div class="windows-alt__item">
+      <h3 class="windows-alt__subheading">{{ 'windows.subheading3' | translate }}</h3>
+      <p class="windows-alt__texto">{{ 'windows.texto3' | translate }}</p>
+    </div>
+
+    <button class="windows-alt__boton" type="button">
+      {{ 'windows.boton' | translate }}
+    </button>
+  </div>
+</section>

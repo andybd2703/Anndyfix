@@ -46,5 +46,15 @@
     "subheading3": "Office 2024 (Pago Unico)",
     "texto3": "Compra de pago unico que da acceso a las aplicaciones de Office para un solo computador, sin necesidad de suscripcion mensual o anual, ideal si prefieres no pagar mensualidades.",
     "boton": "Pregunta por Nuestras Ofertas"
+  },
+  "windows": {
+    "titulo": "Instalamos tu Sistema Operativo Windows",
+    "subheading1": "Windows 8.1",
+    "texto1": "Version ligera ideal para equipos con recursos limitados. Ya no recibe actualizaciones de seguridad de Microsoft, por lo que se recomienda solo para uso especifico o equipos antiguos.",
+    "subheading2": "Windows 10",
+    "texto2": "Una de las versiones mas usadas y estables. Importante: el soporte oficial de Microsoft finalizo en octubre de 2025, por lo que ya no recibe actualizaciones de seguridad.",
+    "subheading3": "Windows 11",
+    "texto3": "La version mas reciente y con soporte activo de Microsoft, con mejoras de rendimiento, seguridad e interfaz. Recomendada para equipos compatibles con sus requisitos minimos.",
+    "boton": "Pregunta por Nuestros Productos"
   }
 }
