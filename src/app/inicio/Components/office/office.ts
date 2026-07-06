@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
+import { OFFICE } from '../inicio-assets';
 
 @Component({
   selector: 'app-office',
@@ -8,4 +9,6 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './office.html',
   styleUrl: './office.scss',
 })
-export class Office {}
+export class Office {
+  officeLogo = OFFICE;
+}

@@ -1,3 +1,28 @@
 <section class="office">
-  <h2 class="titulo-office">{{'Office.titulo' | translate}}</h2>
+  <div class="office__contenido">
+    <h2 class="office__titulo">{{ 'Office.titulo' | translate }}</h2>
+
+    <div class="office__item">
+      <h3 class="office__subheading">{{ 'Office.subheading1' | translate }}</h3>
+      <p class="office__texto">{{ 'Office.texto1' | translate }}</p>
+    </div>
+
+    <div class="office__item">
+      <h3 class="office__subheading">{{ 'Office.subheading2' | translate }}</h3>
+      <p class="office__texto">{{ 'Office.texto2' | translate }}</p>
+    </div>
+
+    <div class="office__item">
+      <h3 class="office__subheading">{{ 'Office.subheading3' | translate }}</h3>
+      <p class="office__texto">{{ 'Office.texto3' | translate }}</p>
+    </div>
+
+    <button class="office__boton" type="button">
+      {{ 'Office.boton' | translate }}
+    </button>
+  </div>
+
+  <div class="office__imagen-wrapper">
+    <img class="office__imagen" [src]="officeLogo" alt="Office 365">
+  </div>
 </section>

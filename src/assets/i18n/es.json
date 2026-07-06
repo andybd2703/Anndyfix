@@ -38,6 +38,13 @@
     ]
   },
   "Office": {
-    "titulo": "Instalamos Pauqetes de Office 365"
+    "titulo": "Instalamos Paquetes de Office 365",
+    "subheading1": "Microsoft 365 Personal",
+    "texto1": "Pensado para un solo usuario. Incluye acceso a Word, Excel, PowerPoint, Outlook y OneNote, además de 1 TB de almacenamiento en OneDrive y actualizaciones continuas de las aplicaciones.",
+    "subheading2": "Microsoft 365 Familia",
+    "texto2": "Permite compartir la suscripcion con hasta cinco personas mas, cada una con su propio almacenamiento (hasta 6 TB en total repartidos entre los usuarios) y acceso completo a las aplicaciones de Office.",
+    "subheading3": "Office 2024 (Pago Unico)",
+    "texto3": "Compra de pago unico que da acceso a las aplicaciones de Office para un solo computador, sin necesidad de suscripcion mensual o anual, ideal si prefieres no pagar mensualidades.",
+    "boton": "Pregunta por Nuestras Ofertas"
   }
 }
