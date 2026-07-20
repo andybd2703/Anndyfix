@@ -14,10 +14,10 @@
   <div class="navbar__menu" [class.open]="menuOpen">
     <ul class="navbar__links">
       <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-          (click)="closeMenu()">Inicio</a></li>
-      <li><a routerLink="/servicios" routerLinkActive="active" (click)="closeMenu()">Servicios</a></li>
-      <li><a routerLink="/contacto" routerLinkActive="active" (click)="closeMenu()">Contacto</a></li>
+          (click)="scrollToTop()">Inicio</a></li>
+      <li><a routerLink="/servicios" routerLinkActive="active" (click)="scrollToTop()">Servicios</a></li>
+      <li><a routerLink="/contacto" routerLinkActive="active" (click)="scrollToTop()">Contacto</a></li>
     </ul>
-    <a class="navbar__cta" routerLink="/contacto" (click)="closeMenu()">Agenda tu cita</a>
+    <a class="navbar__cta" routerLink="/contacto" (click)="scrollToTop()">Agenda tu cita</a>
   </div>
 </nav>
