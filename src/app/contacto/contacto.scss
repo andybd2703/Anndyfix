@@ -62,20 +62,83 @@
   gap: 1.5rem;
 }
 
+.contacto-form__grid--single {
+  grid-template-columns: 1fr;
+}
+
 .contacto-card--info {
   padding: 2rem;
-  min-height: 220px;
+  min-height: auto;
 }
 
-.contacto-card--info h3 {
-  margin: 0 0 1rem;
+.contacto-card--compact {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.contacto-card__header h3 {
+  margin: 0 0 0.75rem;
   color: #f8fafc;
+  font-size: 1.55rem;
 }
 
-.contacto-card--info p {
+.contacto-card__header p {
   margin: 0;
-  color: rgba(226, 232, 240, 0.82);
+  color: rgba(226, 232, 240, 0.8);
   line-height: 1.8;
+}
+
+.contacto-card__details {
+  display: grid;
+  gap: 1rem;
+}
+
+.contacto-card__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.contacto-card__item:last-child {
+  border-bottom: none;
+}
+
+.contacto-card__item span {
+  color: #c7d2fe;
+  font-weight: 700;
+  min-width: 100px;
+}
+
+.contacto-card__item p,
+.contacto-card__item a {
+  margin: 0;
+  color: #e2e8f0;
+  text-align: right;
+}
+
+.contacto-card__item a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contacto-card__item a:hover {
+  color: #8b5cf6;
+}
+
+.mapa-card {
+  border-radius: 1.75rem;
+  overflow: hidden;
+  min-height: 240px;
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.12);
+}
+
+.mapa-card iframe {
+  width: 100%;
+  min-height: 240px;
 }
 
 @media (max-width: 980px) {
