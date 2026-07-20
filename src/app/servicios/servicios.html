@@ -1,0 +1,53 @@
+<div class="servicios-page">
+  <section class="section servicios-hero">
+    <div class="section__eyebrow">Servicios</div>
+    <h1 class="section__title">Servicio completo para tu equipo y tu oficina</h1>
+    <p class="section__subtitle">Conoce todos los paquetes de soporte técnico, mantenimiento y soluciones de software
+      que ofrecemos para mantener tus equipos funcionando como nuevos.</p>
+  </section>
+
+  <section class="section servicios-grid">
+    <article class="servicio-card">
+      <img class="servicio-card__image" [src]="software" alt="Mantenimiento de software" />
+      <div class="servicio-card__content">
+        <span class="servicio-card__label">Software</span>
+        <h2>{{ 'servicios.software' | translate }}</h2>
+        <ul>
+          <li *ngFor="let item of descripcionSoftware">{{ item }}</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="servicio-card servicio-card--accent">
+      <img class="servicio-card__image" [src]="formateo" alt="Mantenimiento de formateo" />
+      <div class="servicio-card__content">
+        <span class="servicio-card__label">Formateo</span>
+        <h2>{{ 'servicios.formateo' | translate }}</h2>
+        <ul>
+          <li *ngFor="let item of descripcionFormateo">{{ item }}</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="servicio-card">
+      <img class="servicio-card__image" [src]="fisico" alt="Mantenimiento físico" />
+      <div class="servicio-card__content">
+        <span class="servicio-card__label">Hardware</span>
+        <h2>{{ 'servicios.fisico' | translate }}</h2>
+        <ul>
+          <li *ngFor="let item of descripcionFisico">{{ item }}</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <section class="section servicios-contacto">
+    <div class="contacto-card">
+      <div>
+        <h2>¿Listo para mejorar tu equipo?</h2>
+        <p>Solicita una revisión técnica y recibe una propuesta personalizada con el mejor tiempo de respuesta.</p>
+      </div>
+      <a class="button button--primary" href="mailto:contacto@anndyfix.com">Enviar consulta</a>
+    </div>
+  </section>
+</div>

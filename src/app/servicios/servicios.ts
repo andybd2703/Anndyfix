@@ -2,24 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import {
-  DESCRIPCION,
   MANTENIMIENTO_FISICO,
   MANTENIMIENTO_FORMATEO,
   MANTENIMIENTO_SOFTWARE,
-  OFFICE,
-  WINDOWS,
-} from './Components/inicio-assets';
+} from '../inicio/Components/inicio-assets';
 
 @Component({
-  selector: 'app-inicio',
+  selector: 'app-servicios',
   imports: [CommonModule, TranslatePipe],
-  templateUrl: './inicio.html',
-  styleUrl: './inicio.scss',
+  templateUrl: './servicios.html',
+  styleUrl: './servicios.scss',
 })
-export class Inicio implements OnInit {
-  descripcion = DESCRIPCION;
-  officeLogo = OFFICE;
-  logo = WINDOWS;
+export class Servicios implements OnInit {
   software = MANTENIMIENTO_SOFTWARE;
   formateo = MANTENIMIENTO_FORMATEO;
   fisico = MANTENIMIENTO_FISICO;

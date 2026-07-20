@@ -1,12 +1,23 @@
 <nav class="navbar">
-  <div class="logo">
-    ANNDYFIX
+  <div class="navbar__brand">
+    <a class="navbar__logo" routerLink="/">ANNDYFIX</a>
+    <span class="navbar__tag">Soporte técnico y mantenimiento premium</span>
   </div>
 
-  <ul class="menu">
-    <li><a href="#">Inicio</a></li>
-    <li><a href="#">Servicios</a></li>
-    <li><a href="#">Nosotros</a></li>
-    <li><a href="#">Contacto</a></li>
-  </ul>
+  <button class="navbar__toggle" type="button" aria-label="Abrir menú" (click)="toggleMenu()"
+    [attr.aria-expanded]="menuOpen">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="navbar__menu" [class.open]="menuOpen">
+    <ul class="navbar__links">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()">Inicio</a></li>
+      <li><a routerLink="/servicios" routerLinkActive="active" (click)="closeMenu()">Servicios</a></li>
+      <li><a routerLink="/contacto" routerLinkActive="active" (click)="closeMenu()">Contacto</a></li>
+    </ul>
+    <a class="navbar__cta" routerLink="/contacto" (click)="closeMenu()">Agenda tu cita</a>
+  </div>
 </nav>

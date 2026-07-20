@@ -1,4 +1,130 @@
-<app-descripcion></app-descripcion>
-<app-nuestro-servicios></app-nuestro-servicios>
-<app-office></app-office>
-<app-windows-paquetes></app-windows-paquetes>
+<div class="inicio-page">
+  <section class="hero section">
+    <div class="hero__body">
+      <span class="hero__eyebrow">Soporte técnico profesional</span>
+      <h1 class="hero__title">Mantenimiento y soporte para tu equipo con confianza y rapidez</h1>
+      <p class="hero__text">{{ 'inicio.Descripcion' | translate }}</p>
+
+      <div class="hero__actions">
+        <a class="button button--primary" href="#servicios">Ver servicios</a>
+        <a class="button button--secondary" href="#contacto">Contáctanos</a>
+      </div>
+
+      <div class="hero__badges">
+        <span class="badge">Diagnóstico inmediato</span>
+        <span class="badge">Soluciones completas</span>
+        <span class="badge">Instalación segura</span>
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <div class="hero__glow"></div>
+      <img class="hero__image" [src]="descripcion" alt="Mantenimiento de PC" />
+    </div>
+  </section>
+
+  <section id="servicios" class="section servicios">
+    <div class="section__header">
+      <span class="section__eyebrow">Nuestros servicios</span>
+      <h2 class="section__title">Diseño, optimización e instalación con un solo equipo</h2>
+      <p class="section__subtitle">Descubre cómo mejoramos la estabilidad y el rendimiento de tu equipo con procesos
+        expertos y atención personalizada.</p>
+    </div>
+
+    <div class="servicios__grid">
+      <article class="servicio-card">
+        <img class="servicio-card__image" [src]="software" alt="Mantenimiento de software" />
+        <div class="servicio-card__body">
+          <span class="servicio-card__label">Software</span>
+          <h3>{{ 'servicios.software' | translate }}</h3>
+          <ul class="servicio-card__list">
+            <li *ngFor="let item of descripcionSoftware">{{ item }}</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="servicio-card servicio-card--accent">
+        <img class="servicio-card__image" [src]="formateo" alt="Mantenimiento de formateo" />
+        <div class="servicio-card__body">
+          <span class="servicio-card__label">Formateo</span>
+          <h3>{{ 'servicios.formateo' | translate }}</h3>
+          <ul class="servicio-card__list">
+            <li *ngFor="let item of descripcionFormateo">{{ item }}</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="servicio-card">
+        <img class="servicio-card__image" [src]="fisico" alt="Mantenimiento físico" />
+        <div class="servicio-card__body">
+          <span class="servicio-card__label">Hardware</span>
+          <h3>{{ 'servicios.fisico' | translate }}</h3>
+          <ul class="servicio-card__list">
+            <li *ngFor="let item of descripcionFisico">{{ item }}</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section feature office" aria-label="Paquetes de Office">
+    <div class="feature__content">
+      <span class="section__eyebrow">Office instalado</span>
+      <h2 class="feature__title">Paquetes de Office configurados para tu trabajo diario</h2>
+      <div class="feature__items">
+        <div class="feature__item">
+          <h3>{{ 'Office.subheading1' | translate }}</h3>
+          <p>{{ 'Office.texto1' | translate }}</p>
+        </div>
+        <div class="feature__item">
+          <h3>{{ 'Office.subheading2' | translate }}</h3>
+          <p>{{ 'Office.texto2' | translate }}</p>
+        </div>
+        <div class="feature__item">
+          <h3>{{ 'Office.subheading3' | translate }}</h3>
+          <p>{{ 'Office.texto3' | translate }}</p>
+        </div>
+      </div>
+      <a class="button button--primary" href="#contacto">{{ 'Office.boton' | translate }}</a>
+    </div>
+    <div class="feature__visual">
+      <img class="feature__image" [src]="officeLogo" alt="Office 365" />
+    </div>
+  </section>
+
+  <section class="section feature windows-alt" aria-label="Sistemas operativos Windows">
+    <div class="feature__visual windows-alt__visual">
+      <img class="feature__image" [src]="logo" alt="Windows" />
+    </div>
+    <div class="feature__content">
+      <span class="section__eyebrow">Sistemas operativos</span>
+      <h2 class="feature__title">Instalamos Windows con soporte completo</h2>
+      <div class="feature__items">
+        <div class="feature__item">
+          <h3>{{ 'windows.subheading1' | translate }}</h3>
+          <p>{{ 'windows.texto1' | translate }}</p>
+        </div>
+        <div class="feature__item">
+          <h3>{{ 'windows.subheading2' | translate }}</h3>
+          <p>{{ 'windows.texto2' | translate }}</p>
+        </div>
+        <div class="feature__item">
+          <h3>{{ 'windows.subheading3' | translate }}</h3>
+          <p>{{ 'windows.texto3' | translate }}</p>
+        </div>
+      </div>
+      <a class="button button--secondary" href="#contacto">{{ 'windows.boton' | translate }}</a>
+    </div>
+  </section>
+
+  <section id="contacto" class="section cta">
+    <div class="cta__card">
+      <div>
+        <span class="section__eyebrow">Consigue ayuda ahora</span>
+        <h2 class="cta__title">Consulta tu servicio en menos de 24 horas</h2>
+        <p class="cta__text">Envíanos un mensaje y obtén una respuesta rápida con una propuesta técnica a la medida.</p>
+      </div>
+      <a class="button button--primary" href="mailto:contacto@anndyfix.com">contacto@anndyfix.com</a>
+    </div>
+  </section>
+</div>
