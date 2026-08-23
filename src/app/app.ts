@@ -6,10 +6,11 @@ import { Contacto } from './contacto/contacto';
 import { Navbar } from './shared/navbar/navbar';
 import { WhatsappFlotante } from './shared/whatsapp-flotante/whatsapp-flotante';
 import { Footer } from './shared/footer/footer';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, RouterOutlet, WhatsappFlotante, Footer],
+  imports: [Navbar, RouterOutlet, WhatsappFlotante, Footer, TranslatePipe],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

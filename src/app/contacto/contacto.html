@@ -2,45 +2,44 @@
   <section class="section contacto-hero">
     <div class="contacto-hero__card">
       <div>
-        <span class="section__eyebrow">Contacto</span>
-        <h1 class="section__title">¿Tienes una falla o necesitas soporte urgente?</h1>
-        <p class="section__subtitle">Escríbenos y recibe una respuesta rápida con un diagnóstico inicial y una propuesta
-          de servicio personalizada.</p>
+        <span class="section__eyebrow">{{ 'contacto.eyebrow' | translate }}</span>
+        <h1 class="section__title">{{ 'contacto.titulo' | translate }}</h1>
+        <p class="section__subtitle">{{ 'contacto.subtitulo' | translate }}</p>
       </div>
 
       <div class="contacto-hero__actions">
-        <a class="button button--primary" href="mailto:contacto@anndyfix.com">contacto@anndyfix.com</a>
-        <a class="button button--secondary" href="tel:+573103322176">Llamar ahora</a>
+        <a class="button button--primary" href="mailto:contacto@anndyfix.com">{{ 'contacto.emailBoton' | translate
+          }}</a>
+        <a class="button button--secondary" href="tel:+573103322176">{{ 'contacto.llamar' | translate }}</a>
       </div>
     </div>
   </section>
 
   <section class="section contacto-form">
     <div class="contacto-form__intro">
-      <h2 class="feature__title">Cuéntanos tu caso</h2>
-      <p>En breve te daremos un plan de acción para tu equipo, ya sea reparación, optimización o renovación de software.
-      </p>
+      <h2 class="feature__title">{{ 'contacto.casoTitulo' | translate }}</h2>
+      <p>{{ 'contacto.casoTexto' | translate }}</p>
     </div>
 
     <div class="contacto-form__grid contacto-form__grid--single">
       <div class="contacto-card contacto-card--info contacto-card--compact">
         <div class="contacto-card__header">
-          <h3>Contáctanos</h3>
-          <p>Escríbenos o llámanos y recibe soporte rápido para tu equipo, mantenimiento y soluciones de software.</p>
+          <h3>{{ 'contacto.contactanos' | translate }}</h3>
+          <p>{{ 'contacto.descripcion' | translate }}</p>
         </div>
 
         <div class="contacto-card__details">
           <div class="contacto-card__item">
-            <span>Teléfono</span>
+            <span><i class="pi pi-phone" aria-hidden="true"></i>{{ 'contacto.telefono' | translate }}</span>
             <a href="tel:+573103322176">+57 310 332 2176</a>
           </div>
           <div class="contacto-card__item">
-            <span>Email</span>
-            <a href="mailto:contacto@anndyfix.com">contacto@anndyfix.com</a>
+            <span><i class="pi pi-envelope" aria-hidden="true"></i>{{ 'contacto.email' | translate }}</span>
+            <a href="mailto:contacto@anndyfix.com">{{ 'contacto.emailBoton' | translate }}</a>
           </div>
           <div class="contacto-card__item">
-            <span>Ubicación</span>
-            <p>Cali, Colombia</p>
+            <span><i class="pi pi-map-marker" aria-hidden="true"></i>{{ 'contacto.ubicacion' | translate }}</span>
+            <p>{{ 'contacto.ciudad' | translate }}</p>
           </div>
         </div>
 

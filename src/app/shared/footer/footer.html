@@ -3,36 +3,44 @@
 
   <div class="footer__content">
     <div class="footer__brand footer__animate">
-      <h2>AnndyFix Pro Computer</h2>
-      <p>Transformando ideas en experiencias digitales con diseño limpio, animaciones suaves y una presencia memorable
-        en cada pantalla.</p>
+      <h2>{{ 'footer.marca' | translate }}</h2>
+      <p>{{ 'footer.descripcion' | translate }}</p>
 
-      <div class="footer__social" aria-label="Redes sociales">
-        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+      <div class="footer__social" [attr.aria-label]="'footer.redes' | translate">
+        <a href="#" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'footer.facebook' | translate"
+          [attr.title]="'footer.facebook' | translate">
           <i class="pi pi-facebook" aria-hidden="true"></i>
-          <span class="sr-only">Facebook</span>
+          <span class="sr-only">{{ 'footer.facebook' | translate }}</span>
         </a>
 
-        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+        <a href="#" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'footer.instagram' | translate"
+          [attr.title]="'footer.instagram' | translate">
           <i class="pi pi-instagram" aria-hidden="true"></i>
-          <span class="sr-only">Instagram</span>
+          <span class="sr-only">{{ 'footer.instagram' | translate }}</span>
         </a>
 
-        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube">
+        <a href="#" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'footer.youtube' | translate"
+          [attr.title]="'footer.youtube' | translate">
           <i class="pi pi-youtube" aria-hidden="true"></i>
-          <span class="sr-only">YouTube</span>
+          <span class="sr-only">{{ 'footer.youtube' | translate }}</span>
         </a>
       </div>
     </div>
 
     <div class="footer__info footer__animate">
-      <h3>Contacto rápido</h3>
-      <a href="mailto:contacto@anndyfix.com">contacto@anndyfix.com</a>
-      <a href="tel:+573103322176">+57 310 332 2176</a>
+      <h3>{{ 'footer.contactoRapido' | translate }}</h3>
+      <a href="mailto:contacto@anndyfix.com">
+        <i class="pi pi-envelope" aria-hidden="true"></i>
+        <span>{{ 'footer.email' | translate }}</span>
+      </a>
+      <a href="tel:+573103322176">
+        <i class="pi pi-phone" aria-hidden="true"></i>
+        <span>{{ 'footer.telefono' | translate }}</span>
+      </a>
     </div>
   </div>
 
   <div class="footer__bottom footer__animate">
-    <p>© 2026 AndyFix. Página creada por DevStudio con diseño moderno y experiencia profesional.</p>
+    <p>{{ 'footer.copyright' | translate }}</p>
   </div>
 </footer>

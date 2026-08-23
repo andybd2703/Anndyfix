@@ -1,13 +1,68 @@
 {
   "inicio": {
     "Descripcion": "Anndy Fix Pro Compfuter (AFPC) es una empresa especializada en el mantenimiento preventivo y correctivo de equipos de cómputo. Ofrecemos soluciones integrales en hardware y software, orientadas a optimizar el rendimiento, prolongar la vida útil de los equipos y garantizar la continuidad de las operaciones tecnológicas de nuestros clientes. Nuestro compromiso es brindar un servicio técnico confiable, eficiente y de alta calidad, respaldado por personal capacitado y un enfoque basado en la excelencia, la innovación y la satisfacción del cliente.",
-    "logotipo": "Soluciones profesionales en mantenimiento y soporte tecnológico. "
+    "logotipo": "Soluciones profesionales en mantenimiento y soporte tecnológico. ",
+    "carrusel": {
+      "aria": "Galería de servicios",
+      "seleccionar": "Seleccionar imagen",
+      "anterior": "Imagen anterior",
+      "siguiente": "Imagen siguiente",
+      "mostrar": "Mostrar imagen"
+    },
+    "hero": {
+      "eyebrow": "Soporte técnico profesional",
+      "titulo": "Mantenimiento y soporte para tu equipo con confianza y rapidez",
+      "verServicios": "Ver servicios",
+      "contactanos": "Contáctanos",
+      "diagnostico": "Diagnóstico inmediato",
+      "soluciones": "Soluciones completas",
+      "instalacion": "Instalación segura",
+      "imagen": "Mantenimiento de PC"
+    },
+    "serviciosInicio": {
+      "eyebrow": "Nuestros servicios",
+      "titulo": "Diseño, optimización e instalación con un solo equipo",
+      "subtitulo": "Descubre cómo mejoramos la estabilidad y el rendimiento de tu equipo con procesos expertos y atención personalizada.",
+      "software": "Mantenimiento de software",
+      "formateo": "Mantenimiento de formateo",
+      "hardware": "Mantenimiento físico"
+    },
+    "office": {
+      "eyebrow": "Office instalado",
+      "titulo": "Paquetes de Office configurados para tu trabajo diario",
+      "aria": "Paquetes de Office",
+      "imagen": "Office 365"
+    },
+    "windowsInicio": {
+      "eyebrow": "Sistemas operativos",
+      "titulo": "Instalamos Windows con soporte completo",
+      "aria": "Sistemas operativos Windows",
+      "imagen": "Windows"
+    },
+    "cta": {
+      "eyebrow": "Consigue ayuda ahora",
+      "titulo": "Consulta tu servicio en menos de 24 horas",
+      "texto": "Envíanos un mensaje y obtén una respuesta rápida con una propuesta técnica a la medida.",
+      "correo": "contacto@anndyfix.com"
+    }
   },
   "servicios": {
     "titulo": "Nuestros Servicios",
     "software": "Mantenimiento de Software",
     "fisico": "Mantenimiento de Fisico",
     "formateo": "Mantenimiento de Formateo",
+    "pagina": {
+      "eyebrow": "Servicios",
+      "titulo": "Servicio completo para tu equipo y tu oficina",
+      "subtitulo": "Conoce todos los paquetes de soporte técnico, mantenimiento y soluciones de software que ofrecemos para mantener tus equipos funcionando como nuevos.",
+      "software": "Software",
+      "formateo": "Formateo",
+      "hardware": "Hardware",
+      "ctaEyebrow": "Soporte personalizado",
+      "ctaTitulo": "¿Listo para mejorar tu equipo?",
+      "ctaTexto": "Solicita una revisión técnica y recibe una propuesta personalizada con el mejor tiempo de respuesta.",
+      "enviarConsulta": "Enviar consulta"
+    },
     "descripcion_fisico": [
       "Desarme total y limpieza de sus partes con productos especializados",
       "Reemplazo de pasta termica",
@@ -56,5 +111,48 @@
     "subheading3": "Windows 11",
     "texto3": "La version mas reciente y con soporte activo de Microsoft, con mejoras de rendimiento, seguridad e interfaz. Recomendada para equipos compatibles con sus requisitos minimos.",
     "boton": "Pregunta por Nuestros Productos"
+  },
+  "navbar": {
+    "marca": "ANNDYFIX",
+    "inicio": "Inicio",
+    "servicios": "Servicios",
+    "contacto": "Contacto",
+    "logoAria": "Anndyfix, ir al inicio",
+    "tag": "Soporte técnico y mantenimiento premium",
+    "abrirMenu": "Abrir menú",
+    "cerrarMenu": "Cerrar menú",
+    "cta": "Agenda tu cita"
+  },
+  "footer": {
+    "marca": "AnndyFix Pro Computer",
+    "descripcion": "Transformando ideas en experiencias digitales con diseño limpio, animaciones suaves y una presencia memorable en cada pantalla.",
+    "redes": "Redes sociales",
+    "contactoRapido": "Contacto rápido",
+    "email": "contacto@anndyfix.com",
+    "telefono": "+57 310 332 2176",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "youtube": "YouTube",
+    "copyright": "© 2026 AndyFix. Página creada por DevStudio con diseño moderno y experiencia profesional."
+  },
+  "contacto": {
+    "eyebrow": "Contacto",
+    "titulo": "¿Tienes una falla o necesitas soporte urgente?",
+    "subtitulo": "Escríbenos y recibe una respuesta rápida con un diagnóstico inicial y una propuesta de servicio personalizada.",
+    "emailBoton": "contacto@anndyfix.com",
+    "llamar": "Llamar ahora",
+    "casoTitulo": "Cuéntanos tu caso",
+    "casoTexto": "En breve te daremos un plan de acción para tu equipo, ya sea reparación, optimización o renovación de software.",
+    "contactanos": "Contáctanos",
+    "descripcion": "Escríbenos o llámanos y recibe soporte rápido para tu equipo, mantenimiento y soluciones de software.",
+    "telefono": "Teléfono",
+    "email": "Email",
+    "ubicacion": "Ubicación",
+    "ciudad": "Cali, Colombia"
+  },
+  "whatsapp": {
+    "aria": "Contactar por WhatsApp",
+    "mensajeVisible": "Escríbenos ahora",
+    "mensaje": "Hola, vi su página y quisiera más información sobre sus servicios"
   }
 }

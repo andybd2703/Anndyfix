@@ -1,5 +1,15 @@
 @import url('tailwindcss');
 @import "primeicons/primeicons.css";
+@import "primeflex/primeflex.css";
+
+:root {
+  --color-fondo: #071923;
+  --color-superficie: #102a36;
+  --color-principal: #0f8b8d;
+  --color-acento: #f4a261;
+  --color-texto: #f1faee;
+  --color-texto-suave: #a8c1c8;
+}
 
 html,
 body {

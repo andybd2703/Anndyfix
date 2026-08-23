@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import {
   DESCRIPCION,
@@ -16,7 +16,7 @@ import {
   templateUrl: './inicio.html',
   styleUrl: './inicio.scss',
 })
-export class Inicio implements OnInit {
+export class Inicio implements OnInit, OnDestroy {
   descripcion = DESCRIPCION;
   officeLogo = OFFICE;
   logo = WINDOWS;
@@ -27,14 +27,60 @@ export class Inicio implements OnInit {
   descripcionFisico: string[] = [];
   descripcionSoftware: string[] = [];
   descripcionFormateo: string[] = [];
+  diapositivaActiva = 0;
+  readonly galeria = [
+    { src: 'imgs/banner.png', alt: 'Optimización y reparación de computadoras' },
+    { src: 'imgs/office.png', alt: 'Optimización y reparación de computadoras' },
+    { src: 'imgs/windows_instalation.png', alt: 'Optimización y reparación de computadoras' },
+  ];
 
-  constructor(private translate: TranslateService) {}
+  private autoplayId?: ReturnType<typeof setInterval>;
+
+  constructor(
+    private translate: TranslateService,
+    @Inject(PLATFORM_ID) private platformId: object,
+  ) {}
 
   ngOnInit() {
     this.cargarDescripciones();
     this.translate.onLangChange.subscribe(() => {
       this.cargarDescripciones();
     });
+
+    if (isPlatformBrowser(this.platformId)) {
+      this.iniciarAutoplay();
+    }
+  }
+
+  ngOnDestroy() {
+    if (this.autoplayId) {
+      clearInterval(this.autoplayId);
+    }
+  }
+
+  mostrarDiapositiva(indice: number) {
+    this.diapositivaActiva = (indice + this.galeria.length) % this.galeria.length;
+    this.iniciarAutoplay();
+  }
+
+  diapositivaAnterior() {
+    this.mostrarDiapositiva(this.diapositivaActiva - 1);
+  }
+
+  diapositivaSiguiente() {
+    this.mostrarDiapositiva(this.diapositivaActiva + 1);
+  }
+
+  private iniciarAutoplay() {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
+    if (this.autoplayId) {
+      clearInterval(this.autoplayId);
+    }
+
+    this.autoplayId = setInterval(() => this.diapositivaSiguiente(), 5000);
   }
 
   private cargarDescripciones() {

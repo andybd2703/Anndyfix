@@ -1,76 +1,113 @@
 <div class="inicio-page">
+  <div class="carousel w-full relative overflow-hidden" role="region"
+    [attr.aria-roledescription]="'inicio.carrusel.aria' | translate"
+    [attr.aria-label]="'inicio.carrusel.aria' | translate">
+    <div class="carousel__slides w-full relative">
+      @for (imagen of galeria; track imagen.src; let indice = $index) {
+      <img class="carousel__image" [class.carousel__image--active]="indice === diapositivaActiva" [src]="imagen.src"
+        [alt]="imagen.alt" [attr.aria-hidden]="indice !== diapositivaActiva"
+        [attr.loading]="indice === 0 ? 'eager' : 'lazy'" [attr.fetchpriority]="indice === 0 ? 'high' : 'auto'" />
+      }
+
+      <button class="carousel__arrow carousel__arrow--previous flex align-items-center justify-content-center"
+        type="button" [attr.aria-label]="'inicio.carrusel.anterior' | translate"
+        [attr.title]="'inicio.carrusel.anterior' | translate" (click)="diapositivaAnterior()">
+        <span aria-hidden="true">&#8592;</span>
+      </button>
+      <button class="carousel__arrow carousel__arrow--next flex align-items-center justify-content-center" type="button"
+        [attr.aria-label]="'inicio.carrusel.siguiente' | translate"
+        [attr.title]="'inicio.carrusel.siguiente' | translate" (click)="diapositivaSiguiente()">
+        <span aria-hidden="true">&#8594;</span>
+      </button>
+    </div>
+
+    <div class="carousel__dots flex align-items-center justify-content-center"
+      [attr.aria-label]="'inicio.carrusel.seleccionar' | translate">
+      @for (imagen of galeria; track imagen.src; let indice = $index) {
+      <button class="carousel__dot" [class.carousel__dot--active]="indice === diapositivaActiva" type="button"
+        [attr.aria-label]="('inicio.carrusel.mostrar' | translate) + ' ' + (indice + 1)"
+        [attr.aria-current]="indice === diapositivaActiva ? 'true' : null"
+        (click)="mostrarDiapositiva(indice)"></button>
+      }
+    </div>
+  </div>
   <section class="hero section">
     <div class="hero__body">
-      <span class="hero__eyebrow">Soporte técnico profesional</span>
-      <h1 class="hero__title">Mantenimiento y soporte para tu equipo con confianza y rapidez</h1>
+      <span class="hero__eyebrow">{{ 'inicio.hero.eyebrow' | translate }}</span>
+      <h1 class="hero__title">{{ 'inicio.hero.titulo' | translate }}</h1>
       <p class="hero__text">{{ 'inicio.Descripcion' | translate }}</p>
 
       <div class="hero__actions">
-        <a class="button button--primary" href="#servicios">Ver servicios</a>
-        <a class="button button--secondary" href="#contacto">Contáctanos</a>
+        <a class="button button--primary" href="#servicios">{{ 'inicio.hero.verServicios' | translate }}</a>
+        <a class="button button--secondary" href="#contacto">{{ 'inicio.hero.contactanos' | translate }}</a>
       </div>
 
       <div class="hero__badges">
-        <span class="badge">Diagnóstico inmediato</span>
-        <span class="badge">Soluciones completas</span>
-        <span class="badge">Instalación segura</span>
+        <span class="badge">{{ 'inicio.hero.diagnostico' | translate }}</span>
+        <span class="badge">{{ 'inicio.hero.soluciones' | translate }}</span>
+        <span class="badge">{{ 'inicio.hero.instalacion' | translate }}</span>
       </div>
     </div>
 
     <div class="hero__visual">
       <div class="hero__glow"></div>
-      <img class="hero__image" [src]="descripcion" alt="Mantenimiento de PC" />
+      <img class="hero__image" [src]="descripcion" [alt]="'inicio.hero.imagen' | translate" />
     </div>
   </section>
 
   <section id="servicios" class="section servicios">
     <div class="section__header">
-      <span class="section__eyebrow">Nuestros servicios</span>
-      <h2 class="section__title">Diseño, optimización e instalación con un solo equipo</h2>
-      <p class="section__subtitle">Descubre cómo mejoramos la estabilidad y el rendimiento de tu equipo con procesos
-        expertos y atención personalizada.</p>
+      <span class="section__eyebrow">{{ 'inicio.serviciosInicio.eyebrow' | translate }}</span>
+      <h2 class="section__title">{{ 'inicio.serviciosInicio.titulo' | translate }}</h2>
+      <p class="section__subtitle">{{ 'inicio.serviciosInicio.subtitulo' | translate }}</p>
     </div>
 
     <div class="servicios__grid">
       <article class="servicio-card">
-        <img class="servicio-card__image" [src]="software" alt="Mantenimiento de software" />
+        <img class="servicio-card__image" [src]="software" [alt]="'inicio.serviciosInicio.software' | translate" />
         <div class="servicio-card__body">
-          <span class="servicio-card__label">Software</span>
+          <span class="servicio-card__label">{{ 'inicio.serviciosInicio.software' | translate }}</span>
           <h3>{{ 'servicios.software' | translate }}</h3>
           <ul class="servicio-card__list">
-            <li *ngFor="let item of descripcionSoftware">{{ item }}</li>
+            @for (item of descripcionSoftware; track item) {
+            <li>{{ item }}</li>
+            }
           </ul>
         </div>
       </article>
 
       <article class="servicio-card servicio-card--accent">
-        <img class="servicio-card__image" [src]="formateo" alt="Mantenimiento de formateo" />
+        <img class="servicio-card__image" [src]="formateo" [alt]="'inicio.serviciosInicio.formateo' | translate" />
         <div class="servicio-card__body">
-          <span class="servicio-card__label">Formateo</span>
+          <span class="servicio-card__label">{{ 'inicio.serviciosInicio.formateo' | translate }}</span>
           <h3>{{ 'servicios.formateo' | translate }}</h3>
           <ul class="servicio-card__list">
-            <li *ngFor="let item of descripcionFormateo">{{ item }}</li>
+            @for (item of descripcionFormateo; track item) {
+            <li>{{ item }}</li>
+            }
           </ul>
         </div>
       </article>
 
       <article class="servicio-card">
-        <img class="servicio-card__image" [src]="fisico" alt="Mantenimiento físico" />
+        <img class="servicio-card__image" [src]="fisico" [alt]="'inicio.serviciosInicio.hardware' | translate" />
         <div class="servicio-card__body">
-          <span class="servicio-card__label">Hardware</span>
+          <span class="servicio-card__label">{{ 'inicio.serviciosInicio.hardware' | translate }}</span>
           <h3>{{ 'servicios.fisico' | translate }}</h3>
           <ul class="servicio-card__list">
-            <li *ngFor="let item of descripcionFisico">{{ item }}</li>
+            @for (item of descripcionFisico; track item) {
+            <li>{{ item }}</li>
+            }
           </ul>
         </div>
       </article>
     </div>
   </section>
 
-  <section class="section feature office" aria-label="Paquetes de Office">
+  <section class="section feature office" [attr.aria-label]="'inicio.office.aria' | translate">
     <div class="feature__content">
-      <span class="section__eyebrow">Office instalado</span>
-      <h2 class="feature__title">Paquetes de Office configurados para tu trabajo diario</h2>
+      <span class="section__eyebrow">{{ 'inicio.office.eyebrow' | translate }}</span>
+      <h2 class="feature__title">{{ 'inicio.office.titulo' | translate }}</h2>
       <div class="feature__items">
         <div class="feature__item">
           <h3>{{ 'Office.subheading1' | translate }}</h3>
@@ -88,17 +125,17 @@
       <a class="button button--primary" href="#contacto">{{ 'Office.boton' | translate }}</a>
     </div>
     <div class="feature__visual">
-      <img class="feature__image" [src]="officeLogo" alt="Office 365" />
+      <img class="feature__image" [src]="officeLogo" [alt]="'inicio.office.imagen' | translate" />
     </div>
   </section>
 
-  <section class="section feature windows-alt" aria-label="Sistemas operativos Windows">
+  <section class="section feature windows-alt" [attr.aria-label]="'inicio.windowsInicio.aria' | translate">
     <div class="feature__visual windows-alt__visual">
-      <img class="feature__image" [src]="logo" alt="Windows" />
+      <img class="feature__image" [src]="logo" [alt]="'inicio.windowsInicio.imagen' | translate" />
     </div>
     <div class="feature__content">
-      <span class="section__eyebrow">Sistemas operativos</span>
-      <h2 class="feature__title">Instalamos Windows con soporte completo</h2>
+      <span class="section__eyebrow">{{ 'inicio.windowsInicio.eyebrow' | translate }}</span>
+      <h2 class="feature__title">{{ 'inicio.windowsInicio.titulo' | translate }}</h2>
       <div class="feature__items">
         <div class="feature__item">
           <h3>{{ 'windows.subheading1' | translate }}</h3>
@@ -120,11 +157,11 @@
   <section id="contacto" class="section cta">
     <div class="cta__card">
       <div>
-        <span class="section__eyebrow">Consigue ayuda ahora</span>
-        <h2 class="cta__title">Consulta tu servicio en menos de 24 horas</h2>
-        <p class="cta__text">Envíanos un mensaje y obtén una respuesta rápida con una propuesta técnica a la medida.</p>
+        <span class="section__eyebrow">{{ 'inicio.cta.eyebrow' | translate }}</span>
+        <h2 class="cta__title">{{ 'inicio.cta.titulo' | translate }}</h2>
+        <p class="cta__text">{{ 'inicio.cta.texto' | translate }}</p>
       </div>
-      <a class="button button--primary" href="mailto:contacto@anndyfix.com">contacto@anndyfix.com</a>
+      <a class="button button--primary" href="mailto:contacto@anndyfix.com">{{ 'inicio.cta.correo' | translate }}</a>
     </div>
   </section>
 </div>
